@@ -6,29 +6,29 @@ Automatically monitor **Elsevier manuscript review status** and receive **email 
 
 ---
 
-## ✨ Features | 功能特性
+## Features | 功能特性
 
-- 📄 Monitor Elsevier manuscript review status  
+- Monitor Elsevier manuscript review status  
   监控 Elsevier 投稿系统中的论文审稿状态
 
-- 📬 Email notification on status change  
+- Email notification on status change  
   审稿进度发生变化时自动发送邮件提醒
 
-- 🧠 Smart change detection (no duplicate spam)  
+- Smart change detection (no duplicate spam)  
   基于指纹比对，仅在真实变化时通知
 
-- 📊 Structured status parsing  
+- Structured status parsing  
   自动解析审稿完成数、邀请数、期刊、更新时间等字段
 
-- 🖥️ Headless browser automation (Playwright)  
+- Headless browser automation (Playwright)  
   使用 Playwright，无需人工操作浏览器
 
-- ⏱️ Supports cron / Nezha / loop mode  
+- Supports cron / Nezha Monitor / loop mode  
   支持 cron、哪吒监控、或常驻后台运行
 
 ---
 
-## 📌 What Can Be Tracked | 可监控内容
+## What Can Be Tracked | 可监控内容
 
 | Field | Description |
 |------|------------|
@@ -44,10 +44,19 @@ Automatically monitor **Elsevier manuscript review status** and receive **email 
 
 ---
 
-## 🚀 Quick Start | 快速开始
+## Quick Start | 快速开始
 
-### 1️⃣ Install dependencies
+### 1.Install dependencies
 
 ```bash
 pip install playwright pyyaml requests
 playwright install chromium
+
+### 2.Modified Config 
+add necessary information(ManuscriptID, last name and first name) into config.
+配置文件中填写必要信息
+
+### 3.Run 
+```bash
+python checkV01.py --config config.yaml --once 
+
