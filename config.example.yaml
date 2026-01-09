@@ -1,0 +1,35 @@
+# Elsevier Review Monitor - example config
+# Copy to config.yaml and fill in your values.
+
+state_file: elsevier_state.json
+
+# Only used in loop mode (when you run without --once)
+interval_seconds: 1800
+
+papers:
+  xxx: # your tag 
+    manuscript_number: xxxxx
+    last_name: xxx
+    first_name: xxx
+
+email:
+  enabled: true
+
+  # SMTP settings 
+  host: smtp.qq.com
+  port: 465
+  username: your_email@qq.com
+  password: your_smtp_auth_code  # QQ邮箱“授权码”，不是登录密码
+
+  # Mail headers
+  from: your_email@qq.com
+  to:
+    - receiver@example.com
+    # - another_receiver@example.com
+
+  # Send policy
+  send_on_first_run: true
+  send_on_change: true
+  send_on_no_change: false
+
+  subject_prefix: "[Elsevier]"
