@@ -51,6 +51,7 @@ Automatically monitor **Elsevier manuscript review status** and receive **email 
 ```bash
 pip install playwright pyyaml requests
 playwright install chromium
+```
 
 ### 2.Modified Config 
 add necessary information(ManuscriptID, last name and first name) into config.
